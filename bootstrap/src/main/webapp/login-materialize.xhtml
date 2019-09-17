@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+
+<h:head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="msapplication-tap-highlight" content="no"/>
+  <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. "/>
+  <meta name="keywords" content="materialize, admin template, dashboard template, flat admin template, responsive admin template,"/>
+  
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <title>Login Page</title>
+
+  <!-- Favicons-->
+  <link rel="icon" href="http://demo.geekslabs.com/materialize/v2.2/layout03/images/favicon/favicon-32x32.png" sizes="32x32"/>
+  
+  
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- Custome CSS-->    
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/custom-style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS style Horizontal Nav (Layout 03)-->    
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/style-horizontal.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/page-center.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/css/prism.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="http://demo.geekslabs.com/materialize/v2.2/layout03/js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+  
+</h:head>
+<h:body style="background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);">
+	<p:growl id="growl" life="3000"/>
+
+<!-- Start Page Loading -->
+  <div id="loader-wrapper">
+      <div id="loader"></div>        
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Page Loading -->
+
+  <div id="login-page" class="row">
+    <div class="col s12 z-depth-4 card-panel">
+      <h:form id="form" class="login-form">
+        <div class="row">
+          <div class="input-field col s12 center">
+            <h:graphicImage library="img" name="logo2.png" styleClass="circle responsive-img valign profile-image-login"/>
+            <p class="center login-form-text">Entre com suas Credenciais</p>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+			<i class="material-icons prefix">person_outline</i>
+            <h:inputText id="username" value="#{bootstrapBean.login}" required="true" requiredMessage="Username is required!"/>
+            <label for="username" class="center-align">Username</label>
+          </div>
+        </div>
+        <div class="row margin">
+          <div class="input-field col s12">
+           	<i class="material-icons prefix">lock_open</i>
+            <h:inputSecret id="password" value="#{bootstrapBean.senha}" required="true" requiredMessage="Password is required!"/>
+            <label for="password">Password</label>
+          </div>
+        </div>
+        <div class="row">          
+          <div class="input-field col s12 m12 l12  login-text">
+              <input type="checkbox" id="remember-me" />
+              <label for="remember-me">Remember me</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <h:commandLink action="#{bootstrapBean.logar}" value="Login" styleClass="btn waves-effect waves-light col s12"/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6 m6 l6">
+            <p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
+          </div>
+          <div class="input-field col s6 m6 l6">
+              <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
+          </div>          
+        </div>
+
+      </h:form>
+    </div>
+  </div>
+
+
+
+  <!-- ================================================  Scripts   ================================================ -->
+
+  <!-- jQuery Library -->
+  <script type="text/javascript" src="http://demo.geekslabs.com/materialize/v2.2/layout03/js/jquery-1.11.2.min.js"/>
+  <!--materialize js-->
+  <script type="text/javascript" src="http://demo.geekslabs.com/materialize/v2.2/layout03/js/materialize.js"/>
+  <!--prism-->
+  <script type="text/javascript" src="http://demo.geekslabs.com/materialize/v2.2/layout03/js/prism.js"/>
+  <!--scrollbar-->
+  <script type="text/javascript" src="http://demo.geekslabs.com/materialize/v2.2/layout03/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"/>
+
+  <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+  <script type="text/javascript" src="http://demo.geekslabs.com/materialize/v2.2/layout03/js/plugins.js"/>
+</h:body>
+</html>

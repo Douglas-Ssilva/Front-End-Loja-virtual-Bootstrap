@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Frutos e Frutas</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	
+	<!-- Fonte google -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<link rel="icon" href="http://demo.geekslabs.com/materialize/v2.2/layout03/images/favicon/favicon-32x32.png" sizes="32x32"/>
+</head>
+
+<body>
+	
+	<!-- Cabeçalho -->
+	<header>
+		<!-- fixed-top deixa a navbar de forma fixa -->
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top background-color">
+			<a class="navbar-brand h1-font color-especial" href="#">Fruta & Fruto</a>
+			
+			<!-- É habilitado quando diminuimos a página -->
+			<!-- Todo atributo que começa com aria serve p programas leitores de tela -->
+			<!-- tabindex="-1" impede que acessemos esse link com o Tab -->
+			
+			
+			<!-- Button hamburguer -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse"	data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" 
+				   aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
+			<!-- class justify-content-end alinha o conteúdo à esquerda -->
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+				<ul class="navbar-nav">
+					<li> <a class="nav-item nav-link active text-light" href="#">Início<span class="sr-only">(current)</span></a></li>
+					<li> <a class="nav-item nav-link text-light" href="#">Receitas</a></li>
+					<li> <a class="nav-item nav-link text-light" href="#">Quem Somos</a></li>
+					<li> <a class="nav-item nav-link text-light" data-toggle="modal" data-target="#modal-contato" href="#">Contato</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
+	
+	<main>
+		<!-- Carousel, data-interval="2000" definição de tempo de cada img -->
+		<section class="carrossel">
+			<div id="carouselExampleCaptions" class="carousel slide" data-interval="3000" data-ride="carousel">
+				<ol class="carousel-indicators">
+		<!-- Quantidade de marcadores de imagens -->
+					<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100 imagem-carrousel" src="../img/apple.jpg" alt="First slide">
+						
+						
+		<!-- h-50 altura que o h1 fica no container, display-4 aumenta a letra -->
+						<div class="carousel-caption d-none d-md-block h-50">
+					    	<h1 class="h1-font display-4">First slide label</h1>
+					   </div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 imagem-carrousel" src="../img/grapes.jpg" alt="Second slide">
+						<div class="carousel-caption d-none d-md-block h-50">
+					    	<h1 class="h1-font display-4">Second slide labe</h1>
+					   </div>
+					</div>
+					<div class="carousel-item">
+						<img class="d-block w-100 imagem-carrousel" src="../img/vegetables.jpg" alt="Third slide">
+						<div class="carousel-caption d-none d-md-block h-50">
+					    	<h1 class="h1-font display-4">Third slide labe</h1>
+					   </div>
+					</div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev"> 
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+					<span class="sr-only">Previous</span></a> 
+				<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next"> 
+					<span class="carousel-control-next-icon" aria-hidden="true"></span> 
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</section>
+	
+		<section id="titulo">
+		<!-- pt-3 padding-top, espaçamento -->
+			<h1 class="text-center h1-font color-especial pt-5">Reaproveite melhor os alimentos!</h1>
+			<p class="text-center text-secondary pb-5">Economize e ganhe em saúde!</p>
+		</section>
+	
+		<section class="container bg-light" id="receitas">
+			<div class="row justify-content-center">
+		<!-- Cards de receita, em uma tela média, cada card ocupe 2 pedaços de 12: col-md-2
+			 col-12 em telas pequenas cada card irá ocupar a tela inteira
+			 p-0 tira o espaçamento entre a imagem e borda, m-4 espaçamento entre cards -->
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4">
+					<img class="card-img-top card-position-image" src="../img/apples.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Apple</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4" >
+					<img class="card-img-top card-position-image" src="../img/apple.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Mudança no Style</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4">
+					<img class="card-img-top card-position-image" src="../img/grapes.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Grapes</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4">
+					<img class="card-img-top card-position-image" src="../img/apple.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Mudança no Style</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				<!-- Cards de receita -->
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4">
+					<img class="card-img-top card-position-image" src="../img/gummibarchen.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Gummibarchen</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				<article class="card border-color card-width col-12 col-md-4 p-0 m-4">
+					<img class="card-img-top card-position-image" src="../img/grapes.jpg" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">Grapes</h5>
+						<p class="card-text">Receita refrescante e cheia de vitaminas para seu café da manhã!</p>
+						<a href="#" class="btn btn-color-especial">Veja a Receita</a>
+					</div>
+				</article>
+				
+				</div>
+		</section>
+
+	</main>
+	
+	<!-- m-0 tira a margin default que a tag p trás, p-3 espaçamento interno -->
+	<footer class="background-color p-3">
+		<p class="text-light text-center m-0"> Contato: <a class="text-light" href="mailto:email@gmail.com">email@gmail.com</a></p>
+	</footer>
+
+	<!-- Button trigger modal. Data é um atributo que podemos customizar com a info que queremos. Quando nao queremos usar ID nem Class. Toggle alterna entre
+	 	aparecer e nao o modal e o target pega o alvo-->
+<!-- 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Launch demo modal</button> -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal-contato" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<dialog class="modal-content">
+				<header class="modal-header">
+					<h4 class="modal-title" id="myModalLabel">Cadastro</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</header>
+				
+				<main class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="name">Name</label> 
+							<input type="text" class="form-control" id="name" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email Address</label> 
+							<input type="email" class="form-control" id="exampleInputEmail1" placeholder="nome@email.com">
+						</div>
+						<div class="form-group">
+							<label for="exampleInputPassword1">Password</label> 
+							<input type="password" class="form-control" id="exampleInputPassword1" placeholder="******">
+						</div>
+						<div class="form-group">
+							<label for="textarea">Description</label> 
+							<textarea id="textarea" class="form-control" rows="3" placeholder="Description"></textarea>
+						</div>
+					</form>
+
+				</main>
+				<footer class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-color-especial">Save changes</button>
+				</footer>
+			</dialog>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

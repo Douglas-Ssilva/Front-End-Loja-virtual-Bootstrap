@@ -1,0 +1,37 @@
+.imagem-carrousel {
+/* 	Fazendo a tela se ajustar na altura(vertical) e conforme cada tamanho do device */
+	object-fit: cover; /* diz como será o comportamento da imagem em relação ao seu container, preserva a proporção da imagem sem achatá-la nem cortar */
+	object-position: 0 40%; /*Movendo a imagem no seu eixo x e y. Move a imagem p cima */
+	height: 500px;
+}
+
+.h1-font {
+	font-family: 'Pacifico', cursive;
+}
+
+.color-especial {
+	color: darkred !important;
+}
+
+.btn-color-especial {
+	background-color: darkred;
+	color: white;
+}
+
+.border-color {
+	border-color: darkred;
+}
+
+/*Deixando as imagens no card com mesmo tamanho*/
+.card-position-image {
+	object-fit: cover; 
+	height: 200px;
+}
+
+.card-width {
+	max-width: 18rem; /*Sua largura máxima é 18*/
+}
+
+.background-color {
+	background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
